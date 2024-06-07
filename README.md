@@ -24,3 +24,6 @@ Here are some ideas to get you started:
 ```math
 \ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: -10; position: fixed; top: 0; left: 0; background-size: cover; width: 100vw; height: 100vh; opacity: 0.5; background-repeat: repeat; background: url('https://github.com/mezleca/mezleca/blob/main/20210608_173136.jpg?raw=true');]{x0000}$}
 ```
+```math
+\ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: 6; position: fixed; left: 50dvi; top: 50dvb; width: 80dvmin; background-position: 0 0; height: 80dvmin; translate: -50% -50%; opacity: 1; background-repeat: no-repeat; background-size: 100% 100%;animation: linear infinite rotate-keyframes, 2s linear infinite alternate fade-out, 1.5s ease-in-out alternate infinite shrink-x; background: url('https://github.com/mezleca/mezleca/blob/main/20210608_173136.jpg?raw=true');]{x0000}$}
+```
