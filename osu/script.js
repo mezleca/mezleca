@@ -21,7 +21,8 @@ download.forEach(btn => btn.addEventListener('click', (e) => {
     const img_url = img.src.split("/");
 
     const skin_name = img_url[img_url.length - 2];
-    const skin_path = "/osu/skins/" + skin_name + "/" + skin_name + ".osk";
+    const base_url = "https://github.com/mezleca/mezleca/raw/main/osu";
+    const skin_path = base_url + "/skins/" + skin_name + "/" + skin_name + ".osk";
 
     console.log(skin_path);
 
