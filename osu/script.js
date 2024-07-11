@@ -1,6 +1,12 @@
 const close_btn = document.querySelector(".lightbox-close");
 const imgs = document.querySelectorAll("#img_gallery");
+
 const download = document.querySelectorAll(".download_btn");
+const link = document.querySelectorAll(".link_btn");
+
+const apps = {
+    "osu stuff app": "https://github.com/mezleca/osu-stuff",
+}
 
 const open = (event) => {
     document.getElementById('lightbox').style.display = 'flex';
@@ -14,6 +20,11 @@ const close = () => {
 
 imgs.forEach(img => img.addEventListener('click', open));
 close_btn.addEventListener('click', close);
+
+link.forEach(btn => btn.addEventListener('click', (e) => {
+    const url = apps[e.target.innerText];
+    window.open(url);
+}));
 
 download.forEach(btn => btn.addEventListener('click', (e) => {
 
