@@ -20,12 +20,16 @@ h1 {
     font-weight: 700;
 }
 
-p {
+p, a {
     font-weight: 700;
-    font-size: 1.5em;
 }
 
-p:hover {
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p:hover, a:hover {
     color: #ccc;
 }
 
