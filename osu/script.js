@@ -24,9 +24,7 @@ download.forEach(btn => btn.addEventListener('click', (e) => {
     const skin_name = img_url[img_url.length - 2];
     const base_url = "https://github.com/mezleca/mezleca/raw/main/osu";
     const skin_path = base_url + "/skins/" + skin_name + "/" + skin_name + ".osk";
-
-    console.log(skin_path);
-
+    
     const link = document.createElement('a');
     
     link.setAttribute('href', skin_path);
