@@ -7,25 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>my osu stuff</h1>
+    <h1>osu!</h1>
     <div class="gallery">
-        <div class="gallery-item">
-            <img src="https://github.com/mezleca/mezleca/raw/main/osu/skins/Aristia/cover.png" id="img_gallery" alt="osu image 1">
-            <p class="download_btn">nomod skin</p>
+        <div class="gallery-item"
+            data-bg="https://github.com/mezleca/mezleca/raw/main/osu/skins/Aristia2024/cover.png"
+            data-name="Aristia2024">
+            <p class="title">2024 nomod skin</p>
         </div>
-        <div class="gallery-item">
-            <img src="https://github.com/mezleca/mezleca/raw/main/osu/area.png" id="img_gallery" alt="osu image 2">
-            <p>area (1600x900 in game)</p>
+        <div class="gallery-item"  
+            data-bg="https://github.com/mezleca/mezleca/raw/main/osu/skins/Aristia2025/cover.png"
+            data-name="Aristia2025">
+            <p class="title">2025 nomod skin</p>
         </div>
-        <div class="gallery-item">
-            <img src="https://github.com/mezleca/osu-stuff/blob/main/build/images/menu.png?raw=true" id="img_gallery" alt="osu image 3">
-            <a class="link_btn" href="https://github.com/mezleca/osu-stuff">osu stuff app</a>
+        <div class="gallery-item"
+            data-bg="https://github.com/mezleca/mezleca/raw/main/osu/area.png">
+            <p class="title">area (1600x900 in game)</p>
+        </div>
+        <div class="gallery-item"
+            data-bg="https://github.com/mezleca/osu-stuff/blob/main/resources/preview.png?raw=true">
+            <a class="link_btn" href="https://github.com/mezleca/osu-stuff">osu! stuff app</a>
         </div>
     </div>
     
     <div class="lightbox" id="lightbox" style="display: none;">
         <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <img id="lightbox-img" src="">
     </div>
 
     <script src="script.js"></script>
