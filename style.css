@@ -1,34 +1,24 @@
-@font-face {
-    font-family: "Inter";
-    src: url("./static/InterSemi.ttf") format("truetype");
-}
-
-* { box-sizing: border-box; user-select: none; color: white; margin: 0; padding: 0; font-family: "Inter"; }
-
-:root {
-    --about-color: rgba(255, 255, 255, 0.062); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+* {
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    text-transform: lowercase;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #131313;
+    color: #fff;    
+    margin: 0;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
 }
 
-h1 {
-    text-align: center;
-    font-size: 1.25em;
-}
-
-p {
-    color: rgb(223, 223, 223) !important;
-}
-
-a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 2em;
-}
-
-.container, .user-container {
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -36,8 +26,19 @@ a {
 }
 
 .user-container {
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
+    margin-bottom: 24px;
+}
+
+.user-container {
+    gap: 5px;
+}
+
+.user-container p, h1 {
+    margin: 0;
 }
 
 .user-container > img {
@@ -47,47 +48,110 @@ a {
     object-fit: cover;
 }
 
-.about {
-    background-color: rgb(34, 34, 34);
-    border-radius: 4px;
-    border: 1px solid var(--about-color);
-    width: 50%;
-    align-self: center;
-    padding: 10px;
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+}
+
+p:hover, a:hover {
+    color: #ccc;
+}
+
+.gallery {
     position: relative;
+    padding: 20px;
+    background-color: #161616;
+    border: 2px solid rgb(90, 90, 90, 0.5);
 }
 
-.about > p {
-    z-index: 9999;
+.gallery > h1 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
 }
 
-.project {
+.gallery-content {
     position: relative;
-    width: 20em;
-    background-color: #131313;
-    border-radius: 4px;
-    border: 2px solid var(--about-color);
-    overflow: hidden;
-    margin-top: 10px;
-    padding: 10px;
-    padding-top: 30px;
-    margin-right: 5px;
-    transition: 0.2s border;
-    cursor: pointer;
-}
-
-.project:hover {
-    transition: 0.2s border;
-    border: 2px solid rgb(27, 87, 255);
-}
-
-.project > img {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
     width: 100%;
 }
- 
-.shit {
+
+.gallery-item {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(26,26,26);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border: 2px solid grey;
+    border-color: transparent;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    
+    background-blend-mode: overlay;
+    background-color: rgba(26, 26, 26, 0.7);
+    transition: 0.3s all;
+}
+
+.gallery-item:hover {
+    border-color: rgb(90, 90, 90);
+}
+
+.gallery-item img {
     position: absolute;
-    top: 2%;
-    right: 50%;
-    translate: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.gallery-item img:hover {
+    opacity: 0.7;
+}
+
+.gallery-item > p, .gallery-item >  a {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-close {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
 }
